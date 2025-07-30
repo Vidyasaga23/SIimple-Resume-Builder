@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="mainTitle">Resume Builder</h1>
+
+        <div class="input-section">
+            <h2>Personal Information</h2>
+            <input type="text" id="name" placeholder="Full Name" oninput="updateResume()">
+            <input type="text" id="title" placeholder="Professional Title" oninput="updateResume()">
+            <input type="email" id="email" placeholder="Email" oninput="updateResume()">
+            <input type="tel" id="phone" placeholder="Phone" oninput="updateResume()">
+            <input type="text" id="linkedin" placeholder="LinkedIn Profile URL" oninput="updateResume()">
+
+            <h2>Summary / Objective</h2>
+            <textarea id="summary"  rows="5" oninput="updateResume()"></textarea>
+
+            <h2>Experience</h2>
+            <div id="experience-container">
+                </div>
+            <button onclick="addExperience()">Add Experience</button>
+
+            <h2>Education</h2>
+            <div id="education-container">
+                </div>
+            <button onclick="addEducation()">Add Education</button>
+
+            <h2>Skills</h2>
+            <textarea id="skills" rows="3" oninput="updateResume()"></textarea>
+        </div>
+
+        <div class="resume-preview">
+            <h2>Resume Preview</h2>
+            <div id="preview-content">
+                </div>
+            <button onclick="printResume()">Print Resume</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

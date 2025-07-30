@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #cc4040;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #1e9747;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(24, 4, 71, 0.1);
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    color: #d80909;
+    margin-bottom: 20px;
+}
+
+.input-section, .resume-preview {
+    flex: 1;
+    min-width: 300px; /* Minimum width for each section */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.input-section {
+    background-color: #0c4da152;
+}
+
+h2 {
+    color: #f7cb08;
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.experience-item, .education-item {
+    border: 1px dashed #c0c0c0;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.experience-item input, .education-item input {
+    margin-bottom: 8px;
+}
+
+.remove-btn {
+    background-color: #dc3545;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+/* Resume Preview Styling */
+.resume-preview {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#preview-content {
+    min-height: 400px; /* Ensure preview area has some height */
+    padding: 10px;
+    border: 1px dashed #eee;
+    line-height: 1.6;
+}
+
+#preview-content h3 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+#preview-content p {
+    margin: 0 0 5px 0;
+}
+
+#preview-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+#preview-content ul li {
+    margin-bottom: 3px;
+}
+
+.preview-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.preview-header h2 {
+    color: #0056b3;
+    margin-bottom: 5px;
+}
+
+.preview-header p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.preview-section {
+    margin-bottom: 15px;
+}
+
+.preview-section h3 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.preview-item {
+    margin-bottom: 10px;
+}
+
+.preview-item h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #444;
+}
+
+.preview-item p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.print-resume-btn {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Print Specific Styles */
+@media print {
+    body {
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        max-width: none;
+        flex-direction: column; /* Stack sections for printing */
+    }
+    .input-section {
+        display: none; /* Hide input section when printing */
+    }
+    .resume-preview {
+        flex: none; /* Remove flex sizing */
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        width: 100%; /* Take full width */
+    }
+    .resume-preview h2 {
+        display: none; /* Hide 'Resume Preview' heading */
+    }
+    .print-resume-btn {
+        display: none; /* Hide print button */
+    }
+    #preview-content {
+        min-height: auto;
+        border: none;
+        padding: 0;
+    }
+}
